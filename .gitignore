@@ -17,3 +17,7 @@ build/status/Nl92aXN1YWxpemUvbG9n*
 docker-compose.yml
 
 *.xlsx
+
+# vim swap files
+.*.swp
+.swp
