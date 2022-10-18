@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  gage-conditions-pipeline:
+    image: 807615458658.dkr.ecr.us-west-2.amazonaws.com/vizlab/gage-conditions:latest
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+  gage-conditions-pipeline-shortname:
+    extends: gage-conditions-pipeline
+    image: gage-conditions

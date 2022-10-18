@@ -1,0 +1,11 @@
+*
+*/
+!docker/
+!remake.yml
+!1_fetch.yml
+!1_fetch/
+!2_process.yml
+!2_process/
+!build/status/
+!viz_config.yml
+!lib/
