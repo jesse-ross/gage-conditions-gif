@@ -1,4 +1,4 @@
-ARG DOCKER_BASE_IMAGE=eddelbuettel/r2u:focal
+ARG DOCKER_BASE_IMAGE=eddelbuettel/r2u:jammy
 FROM ${DEVOPS_REGISTRY}${DOCKER_BASE_IMAGE}
 
 # Disable the annoying bell on WSL2
@@ -54,7 +54,6 @@ ENV DOCKER_BUILD_COMMIT_HASH ${DOCKER_BUILD_COMMIT_HASH}
 RUN mkdir /usr/local/lib/R/etc/
 RUN echo 'options(bspm.sudo = TRUE)' >> /usr/local/lib/R/etc/Rprofile.site
 
-
 # Copy repo into image, so the image contains the code it needs to run on ECS.
 # Note: here / is root of build context, NOT file system.
-COPY / ./
+#COPY / ./
