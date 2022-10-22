@@ -74,5 +74,5 @@ process_dv_stats <- function(ind_file, dv_data_ind, site_stats_ind, dates){
   # Write the data file and the indicator file
   data_file <- scipiper::as_data_file(ind_file)
   saveRDS(dv_stats_data, data_file)
-  scipiper::gd_put(ind_file, data_file)
+  scipiper::s3_put(ind_file, data_file)
 }

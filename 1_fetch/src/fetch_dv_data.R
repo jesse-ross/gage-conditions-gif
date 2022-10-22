@@ -45,5 +45,5 @@ fetch_dv_data <- function(ind_file, sites_ind, dates, request_limit){
   # Write the data file and the indicator file
   data_file <- scipiper::as_data_file(ind_file)
   saveRDS(dv_data_unique, data_file)
-  scipiper::gd_put(ind_file, data_file)
+  scipiper::s3_put(ind_file, data_file)
 }

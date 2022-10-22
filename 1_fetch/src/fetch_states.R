@@ -7,5 +7,5 @@ fetch_states <- function(ind_file) {
     method = "libcurl")
 
   # post to Drive for sharing/promising
-  gd_put(ind_file)
+  s3_put(ind_file)
 }
