@@ -6,6 +6,6 @@
 !1_fetch/
 !2_process.yml
 !2_process/
-#!build/status/
+!build/status/
 !viz_config.yml
-#!lib/
+!lib/cfg/s3_config.yml
