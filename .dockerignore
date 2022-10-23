@@ -9,3 +9,4 @@
 !build/status/
 !viz_config.yml
 !lib/cfg/s3_config.yml
+!aws/run-pipeline.sh

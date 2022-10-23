@@ -18,7 +18,7 @@
             "portMappings": [],
             "command": [
                 "bash",
-                "aws/run-pipeline.sh"
+                "/code/aws/run-pipeline.sh"
             ],
             "linuxParameters": null,
             "cpu": 0,
@@ -56,7 +56,7 @@
             "dockerLabels": null,
             "systemControls": null,
             "privileged": null,
-            "name": "build-viz"
+            "name": "build-stats"
         },
         {
             "dnsSearchDomains": null,
@@ -103,7 +103,7 @@
             "firelensConfiguration": null,
             "dependsOn": [
                 {
-                    "containerName": "build-viz",
+                    "containerName": "build-stats",
                     "condition": "SUCCESS"
                 }
             ],
