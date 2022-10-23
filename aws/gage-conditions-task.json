@@ -125,7 +125,7 @@
     ],
     "memory": "1024",
     "taskRoleArn": "arn:aws:iam::807615458658:role/ecsTaskExecutionRole",
-    "family": "vizlab-flow-tiles-task",
+    "family": "vizlab-gage-conditions-task",
     "pidMode": null,
     "requiresCompatibilities": [
         "FARGATE"
