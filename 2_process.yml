@@ -10,7 +10,6 @@ packages:
   - maptools
   - assertthat
   - showtext
-  - googledrive
   - rgdal
   - rgeos
   - purrr
