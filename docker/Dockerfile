@@ -12,15 +12,18 @@ ENV CURL_CA_BUNDLE /etc/ssl/certs/ca-certificates.crt
 
 RUN install2.r \
   assertthat \
+  aws.ec2metadata \
   aws.s3 \
   aws.signature \
   crayon \
   dataRetrieval \
   digest \
   dplyr \
-  googledrive \
   maptools \
   optparse \
+  readr \
+  progress \
+  purrr \
   R6 \
   remotes \
   rgdal \
@@ -30,15 +33,16 @@ RUN install2.r \
   sp \
   storr \
   tidyr \
+  whisker \
   yaml \
   && rm -rf /tmp/*
 
-RUN installGithub.r \
+RUN installGithub.r --update=FALSE \
   richfitz/remake \
   && rm -rf /tmp/*
 
-RUN installGithub.r \
-  USGS-R/scipiper \
+RUN installGithub.r --update=FALSE \
+  jesse-ross/scipiper@use-ec2-metadata \
   && rm -rf /tmp/*
 
 # Use UTC instead of local time zones
