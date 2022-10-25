@@ -24,5 +24,5 @@ fetch_dv_sites <- function(ind_file, dates){
   # Write the data file and the indicator file
   data_file <- scipiper::as_data_file(ind_file)
   saveRDS(sites, data_file)
-  scipiper::s3_put(ind_file, data_file)
+  scipiper::s3_put(ind_file, data_file, use_local_aws_credentials = FALSE)
 }

@@ -17,6 +17,6 @@ process_add_fixed_gh <- function(ind_file, dv_stats_ind, fixed_gh_ind){
   # Write the data file and the indicator file
   data_file <- scipiper::as_data_file(ind_file)
   saveRDS(dv_stats_with_fixed_gh, data_file)
-  scipiper::s3_put(ind_file, data_file)
+  scipiper::s3_put(ind_file, data_file, use_local_aws_credentials = FALSE)
 
 }

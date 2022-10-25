@@ -59,7 +59,7 @@ post_view_polygon <- function(ind_file, view_config) {
   data_file <- as_data_file(ind_file)
   view_polygon <- as_view_polygon(view_config)
   saveRDS(view_polygon, file=data_file)
-  s3_put(ind_file, data_file)
+  s3_put(ind_file, data_file, use_local_aws_credentials = FALSE)
 }
 
 #' download and read in the view polygon
@@ -105,5 +105,5 @@ fetch_geoms <- function(ind_file, geoms_config, crs = sf::st_crs(within), within
 
   # save and post data, write indicator file
   saveRDS(geoms_out, as_data_file(ind_file))
-  s3_put(ind_file, ind_file)
+  s3_put(ind_file, ind_file, use_local_aws_credentials = FALSE)
 }

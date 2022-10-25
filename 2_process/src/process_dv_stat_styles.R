@@ -27,7 +27,7 @@ process_dv_stat_styles <- function(ind_file, dv_stats_ind, stage_ind, gage_style
 
   # Write the data file and the indicator file
   saveRDS(dv_stats_with_style, scipiper::as_data_file(ind_file))
-  scipiper::s3_put(ind_file)
+  scipiper::s3_put(ind_file, use_local_aws_credentials = FALSE)
 }
 
 add_style_columns <- function(per_df, gage_style, percentiles) {

@@ -70,5 +70,5 @@ fetch_inst_stage <- function(ind_file, dv_data_ind, stage_data_ind, request_limi
   # Write the data file and the indicator file
   data_file <- scipiper::as_data_file(ind_file)
   saveRDS(fixed_gh_data, data_file)
-  scipiper::s3_put(ind_file, data_file)
+  scipiper::s3_put(ind_file, data_file, use_local_aws_credentials = FALSE)
 }

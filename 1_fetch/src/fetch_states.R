@@ -6,6 +6,6 @@ fetch_states <- function(ind_file) {
     url = "http://www2.census.gov/geo/tiger/GENZ2017/shp/cb_2017_us_state_20m.zip",
     method = "libcurl")
 
-  # post to Drive for sharing/promising
-  s3_put(ind_file)
+  # post to S3 for sharing/promising
+  s3_put(ind_file, use_local_aws_credentials = FALSE)
 }

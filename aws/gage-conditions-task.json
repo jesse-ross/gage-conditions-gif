@@ -123,7 +123,7 @@
             "name": "upload-result"
         }
     ],
-    "memory": "1024",
+    "memory": "32768",
     "taskRoleArn": "arn:aws:iam::807615458658:role/ecsTaskExecutionRole",
     "family": "vizlab-gage-conditions-task",
     "pidMode": null,
@@ -135,7 +135,7 @@
         "operatingSystemFamily": "LINUX",
         "cpuArchitecture": null
     },
-    "cpu": "256",
+    "cpu": "8192",
     "inferenceAccelerators": [],
     "proxyConfiguration": null,
     "volumes": [
