@@ -7,5 +7,5 @@ fetch_states <- function(ind_file) {
     method = "libcurl")
 
   # post to S3 for sharing/promising
-  s3_put(ind_file, use_local_aws_credentials = FALSE)
+  s3_put(ind_file)
 }

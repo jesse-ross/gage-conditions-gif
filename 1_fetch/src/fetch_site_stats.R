@@ -29,5 +29,5 @@ fetch_site_stats <- function(ind_file, sites_ind, request_limit, percentiles){
   # Write the data file and the indicator file
   data_file <- scipiper::as_data_file(ind_file)
   saveRDS(stat_data, data_file)
-  scipiper::s3_put(ind_file, data_file, use_local_aws_credentials = FALSE)
+  scipiper::s3_put(ind_file, data_file)
 }

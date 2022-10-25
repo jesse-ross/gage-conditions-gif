@@ -24,7 +24,7 @@ process_dv_historic_quantiles <- function(ind_file, dv_historic_ind, percentiles
   # Write the data file and the indicator file
   data_file <- scipiper::as_data_file(ind_file)
   saveRDS(dv_quantiles, data_file)
-  scipiper::s3_put(ind_file, data_file, use_local_aws_credentials = FALSE)
+  scipiper::s3_put(ind_file, data_file)
 }
 
 filter_historic_to_current_sites <- function(ind_file, dv_historic_fn, site_ind) {
@@ -38,6 +38,6 @@ filter_historic_to_current_sites <- function(ind_file, dv_historic_fn, site_ind)
     filter(site_no %in% sites) %>%
     saveRDS(data_file)
 
-  scipiper::s3_put(ind_file, data_file, use_local_aws_credentials = FALSE)
+  scipiper::s3_put(ind_file, data_file)
 
 }
