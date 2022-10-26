@@ -24,6 +24,7 @@ sources:
   - 1_fetch/src/fetch_dv_data.R
   - 1_fetch/src/fetch_dv_historic.R
   - 1_fetch/src/fetch_states.R
+  - 1_fetch/src/calculate_previous_month_boundaries.R
 
 targets:
 
@@ -42,7 +43,7 @@ targets:
   viz_config:
     command: yaml.load_file('viz_config.yml')
   vizDates:
-    command: viz_config[[I('vizDates')]]
+    command: calculate_previous_month_boundaries()
   projection:
     command: viz_config[[I('projection')]]
   request_limit:
