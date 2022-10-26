@@ -29,8 +29,8 @@
             "mountPoints": [
                 {
                     "readOnly": null,
-                    "containerPath": "/output",
-                    "sourceVolume": "output-mount"
+                    "containerPath": "/ephemeral",
+                    "sourceVolume": "bind-mount"
                 }
             ],
             "workingDirectory": null,
@@ -74,8 +74,8 @@
             "portMappings": [],
             "command": [
                 "s3",
-                "cp",
-                "/output/dv_stats.csv",
+                "sync",
+                "/ephemeral/",
                 "s3://vizlab-flow-tiles/in/"
             ],
             "linuxParameters": null,
@@ -87,8 +87,8 @@
             "mountPoints": [
                 {
                     "readOnly": null,
-                    "containerPath": "/output",
-                    "sourceVolume": "output-mount"
+                    "containerPath": "/ephemeral",
+                    "sourceVolume": "bind-mount"
                 }
             ],
             "workingDirectory": null,
@@ -142,7 +142,7 @@
         {
             "fsxWindowsFileServerVolumeConfiguration": null,
             "efsVolumeConfiguration": null,
-            "name": "output-mount",
+            "name": "bind-mount",
             "host": {
                 "sourcePath": null
             },

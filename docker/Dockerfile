@@ -43,7 +43,7 @@ RUN installGithub.r --update=FALSE \
 
 RUN installGithub.r --update=FALSE \
   jesse-ross/scipiper@use-ec2-metadata \
-  && rm -rf /tmp/*
+  && rm -rf /tmp/*/* /tmp/*
 
 # Use UTC instead of local time zones
 ENV TZ=Etc/UTC
