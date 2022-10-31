@@ -1,15 +1,16 @@
 target_default: 1_fetch
 
 packages:
+  - aws.ec2metadata
+  - aws.s3
+  - aws.signature
   - dataRetrieval
   - dplyr
+  - lubridate
   - scipiper
   - sf
   - tidyr
   - yaml
-  - aws.ec2metadata
-  - aws.s3
-  - aws.signature
 
 file_extensions:
   - ind

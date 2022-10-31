@@ -19,6 +19,7 @@ RUN install2.r \
   dataRetrieval \
   digest \
   dplyr \
+  lubridate \
   maptools \
   optparse \
   readr \
