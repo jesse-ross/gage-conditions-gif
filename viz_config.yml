@@ -1,6 +1,6 @@
-# Actual dates of the viz frames
-vizDates:
-  start: '2022-09-01'
+# Dates that make up the wheel (usually a full year)
+wheelDates:
+  start: '2021-10-01'
   end: '2022-09-30'
 
 # view, dimensions
@@ -26,7 +26,7 @@ gage_style:
   with_percentile:
     normal:
       pch: 21
-      cex: 2.0
+      cex: 1.5
       bg: "#d7d7d7" #efefef
     drought:
       pch: 21
@@ -40,11 +40,10 @@ gage_style:
     flood:    # not based on percentile, based on if above flood stage or not
       pch: 21
       cex: 4.0
-      lwd: 5.0
+      lwd: 6.0
       bg: "#04507d" # same as second "wet"
       col: "#AE72E5" #"#9547dd"
   no_percentile:
     pch: 4
     cex: 1.5
     col: "#7f7f7f"
-
