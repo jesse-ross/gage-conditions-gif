@@ -43,7 +43,7 @@ RUN installGithub.r --update=FALSE \
   && rm -rf /tmp/*
 
 RUN installGithub.r --update=FALSE \
-  jesse-ross/scipiper@use-ec2-metadata \
+  USGS-R/scipiper \
   && rm -rf /tmp/*/* /tmp/*
 
 # Use UTC instead of local time zones
